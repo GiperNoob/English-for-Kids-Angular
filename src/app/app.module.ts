@@ -8,6 +8,8 @@ import { TitlePageComponent } from './title-page/title-page.component';
 import { MainCardComponent } from './main-card/main-card.component';
 import { CardComponent } from './card/card.component';
 import { ContentPageComponent } from './content-page/content-page.component';
+import { SwitchFieldComponent } from './switch-field/switch-field.component';
+import { HeaderContainerComponent } from './header-container/header-container.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ContentPageComponent } from './content-page/content-page.component';
     TitlePageComponent,
     MainCardComponent,
     CardComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    SwitchFieldComponent,
+    HeaderContainerComponent
   ],
   imports: [
     BrowserModule,

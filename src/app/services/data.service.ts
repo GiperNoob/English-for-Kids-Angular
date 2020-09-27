@@ -27,7 +27,7 @@ export class DataService {
     },
     {
       title: 'Adjective',
-      urlToImage: '../../assets/images/dance.jpg',
+      urlToImage: '../../assets/images/small.jpg',
     },
     {
       title: 'Animal Set(A)',

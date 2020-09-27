@@ -1,1 +1,28 @@
-<p>nav-bar works!</p>
+<div class="header-container">
+  <nav class="header__menu" [class.active]="isActive ? true : false">
+    <ul class="header__list">
+      <li class="header__link" id="Main Page">Main Page</li>
+      <li class="header__link" id="Action Set(A)">Action Set(A)</li>
+      <li class="header__link" id="Action Set(B)">Action Set(B)</li>
+      <li class="header__link" id="Action Set(C)">Action Set(C)</li>
+      <li class="header__link" id="Adjective">Adjective</li>
+      <li class="header__link" id="Animal Set(A)">Animal Set(A)</li>
+      <li class="header__link" id="Animal Set(B)">Animal Set(B)</li>
+      <li class="header__link" id="Clothes">Clothes</li>
+      <li class="header__link" id="Emotion">Emotion</li>
+    </ul>
+  </nav>
+  <div
+    class="header__burger"
+    [class.active]="isActive ? true : false"
+    (click)="toggleClassMenuBurger()"
+  >
+    <span></span>
+  </div>
+  <!-- <div class="switch-field">
+    <input type="radio" id="radio-one" name="switch-one" value="yes" checked />
+    <label for="radio-one">Train</label>
+    <input type="radio" id="radio-two" name="switch-one" value="no" />
+    <label for="radio-two">Play</label>
+  </div> -->
+</div>

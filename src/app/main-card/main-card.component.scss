@@ -2,8 +2,8 @@
 
 .main-card {
   margin: 10px 0;
-  width: 300px;
-  height: 280px;
+  width: 280px;
+  height: 260px;
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #212529;
@@ -53,7 +53,6 @@
     to(#fff)
   );
   background: linear-gradient(180deg, #fd6a63, #feb46b 40%, #fff 0, #fff);
-  margin: 20px 25px;
 }
 
 .main-card:hover {

@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
+  isRotate = false;
 
-  constructor() { }
+  @Input() word: string;
+  @Input() translate: string;
+  @Input() srcPath: string;
 
-  ngOnInit(): void {
+  rotateToggle(): void {
+    console.log(1);
+
+    this.isRotate = !this.isRotate;
   }
-
 }

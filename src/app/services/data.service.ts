@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 
-export interface Card {
-  word: string;
-  translate: string;
-  image: string;
-  audioSrc: string;
+export interface TitleCard {
+  title: string;
+  urlToImage: string;
 }
 
 @Injectable({
@@ -12,7 +10,7 @@ export interface Card {
 })
 
 export class DataService {
-  private titleDate = [
+  private titleDate: Array<TitleCard> = [
     {
       title: 'Action Set(A)',
       urlToImage: '../../assets/images/dance.jpg',

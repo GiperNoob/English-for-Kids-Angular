@@ -1,14 +1,53 @@
 <nav class="header__menu" [class.active]="isActive ? true : false">
   <ul class="header__list">
-    <li class="header__link" id="Main Page">Main Page</li>
-    <li class="header__link" id="Action Set(A)">Action Set(A)</li>
-    <li class="header__link" id="Action Set(B)">Action Set(B)</li>
-    <li class="header__link" id="Action Set(C)">Action Set(C)</li>
-    <li class="header__link" id="Adjective">Adjective</li>
-    <li class="header__link" id="Animal Set(A)">Animal Set(A)</li>
-    <li class="header__link" id="Animal Set(B)">Animal Set(B)</li>
-    <li class="header__link" id="Clothes">Clothes</li>
-    <li class="header__link" id="Emotion">Emotion</li>
+    <li class="header__link" id="Main Page">
+      <a
+        [routerLink]="['/']"
+        routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Main Page</a
+      >
+    </li>
+    <li class="header__link" id="Action Set(A)">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Action Set(A)</a
+      >
+    </li>
+    <li class="header__link" id="Action Set(B)">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Action Set(B)</a
+      >
+    </li>
+    <li class="header__link" id="Action Set(C)">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Action Set(C)</a
+      >
+    </li>
+    <li class="header__link" id="Adjective">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Adjective</a
+      >
+    </li>
+    <li class="header__link" id="Animal Set(A)">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Animal Set(A)</a
+      >
+    </li>
+    <li class="header__link" id="Animal Set(B)">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Animal Set(B)</a
+      >
+    </li>
+    <li class="header__link" id="Clothes">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Clothes</a
+      >
+    </li>
+    <li class="header__link" id="Emotion">
+      <a [routerLink]="['/content']" routerLinkActive="router-link-active"
+        >Emotion</a
+      >
+    </li>
   </ul>
 </nav>
 <div

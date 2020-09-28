@@ -1,1 +1,11 @@
-<p>card works!</p>
+<div class="card" [class.rotate]="isRotate ? true : false">
+  <div class="front">
+    <img [src]="srcPath" [alt]="srcPath" />
+    <div class="card-header">{{ word }}</div>
+    <button (click)="rotateToggle()">click</button>
+  </div>
+  <div class="back">
+    <img [src]="srcPath" [alt]="srcPath" />
+    <div class="card-header">{{ translate }}</div>
+  </div>
+</div>

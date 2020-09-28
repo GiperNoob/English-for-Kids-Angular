@@ -1,3 +1,12 @@
+.router-link-active {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header__menu {
   position: fixed;
   z-index: 50;

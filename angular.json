@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "English-for-Kids-Angular"
+    }
+  },
+  "defaultProject": "English-for-Kids-Angular",
+  "cli": {
+    "analytics": "550ef8de-58be-4a08-9325-accf9915cb7a"
+  }
 }

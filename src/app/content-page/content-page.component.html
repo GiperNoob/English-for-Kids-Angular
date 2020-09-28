@@ -1,1 +1,8 @@
-<p>content-page works!</p>
+<div class="content-container">
+  <app-card
+    *ngFor="let item of data"
+    [word]="item.word"
+    [translate]="item.translate"
+    [srcPath]="item.image"
+  ></app-card>
+</div>

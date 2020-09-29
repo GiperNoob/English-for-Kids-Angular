@@ -5,3 +5,42 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.start-game {
+  box-sizing: border-box;
+  padding: 20px 25px;
+  font-size: 24px;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 650px;
+  height: 65px;
+  background: linear-gradient(40deg, #ffd86f, #fc6262);
+  color: #fff;
+  border-radius: 10px;
+  outline: 0 !important;
+  border-width: 1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: block;
+}
+
+.start-game:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 20px 0 #ccc;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.7);
+  -webkit-transition: box-shadow 0.25s linear, -webkit-transform 0.7s;
+  transition: box-shadow 0.25s linear, -webkit-transform 0.7s;
+  transition: box-shadow 0.25s linear, transform 0.7s;
+  transition: box-shadow 0.25s linear, transform 0.7s, -webkit-transform 0.7s;
+}
+
+.start-game.repeat {
+  width: 65px;
+  font-size: 0;
+  background-image: url(../../assets/images/repeat.svg),
+    linear-gradient(40deg, #ffd86f, #fc6262);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 32px 32px, cover;
+  background-position: 50%;
+}

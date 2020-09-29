@@ -67,3 +67,16 @@ img {
 .card.rotate .back {
   transform: rotateY(360deg);
 }
+
+.rotate-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+}
+
+.rotate-img {
+  width: 100%;
+  height: 100%;
+}

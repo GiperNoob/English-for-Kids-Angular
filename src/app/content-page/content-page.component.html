@@ -1,8 +1,21 @@
 <div class="content-container">
   <app-card
-    *ngFor="let item of data"
-    [word]="item.word"
-    [translate]="item.translate"
-    [srcPath]="item.image"
+    *ngFor="let card of data"
+    [word]="card.word"
+    [translate]="card.translate"
+    [srcPath]="card.image"
   ></app-card>
 </div>
+
+<ng-container *ngIf="gameService.isPlay">
+  <div class="container-button">
+    <button
+      class="start-game"
+      [class.repeat]="gameService.isRepeat ? true : false"
+      id="Action Set(A)"
+      (click)="gameService.startGame()"
+    >
+      Start Game
+    </button>
+  </div>
+</ng-container>

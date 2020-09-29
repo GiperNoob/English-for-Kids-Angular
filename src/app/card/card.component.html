@@ -1,11 +1,21 @@
-<div class="card" [class.rotate]="isRotate ? true : false">
+<div
+  class="card"
+  [class.rotate]="isRotate ? true : false"
+  (click)="mediaHandler($event)"
+>
   <div class="front">
-    <img [src]="srcPath" [alt]="srcPath" />
+    <img [src]="srcPath" [alt]="word" class="title-img" />
     <div class="card-header">{{ word }}</div>
-    <button (click)="rotateToggle()">click</button>
   </div>
   <div class="back">
-    <img [src]="srcPath" [alt]="srcPath" />
+    <img [src]="srcPath" [alt]="word" />
     <div class="card-header">{{ translate }}</div>
+  </div>
+  <div class="rotate-icon" (click)="rotateTrue()" (mouseleave)="rotateFalse()">
+    <img
+      src="../../assets/images/rotate.svg"
+      alt="rotate-icon"
+      class="rotate-img"
+    />
   </div>
 </div>

@@ -1,4 +1,8 @@
-<div class="main-card green">
+<div
+  class="main-card green"
+  [class.red]="gameService.isPlay ? true : false"
+  [routerLink]="['/content', title]"
+>
   <img [src]="srcPath" [alt]="srcPath" />
   <span>{{ title }}</span>
 </div>

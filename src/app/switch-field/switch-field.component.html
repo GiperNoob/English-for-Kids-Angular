@@ -1,6 +1,19 @@
 <div class="switch-field">
-  <input type="radio" id="radio-one" name="switch-one" value="yes" checked />
+  <input
+    type="radio"
+    id="radio-one"
+    name="switch-one"
+    value="yes"
+    checked
+    (click)="gameService.isPlayFalse($event)"
+  />
   <label for="radio-one">Train</label>
-  <input type="radio" id="radio-two" name="switch-one" value="no" />
+  <input
+    type="radio"
+    id="radio-two"
+    name="switch-one"
+    value="no"
+    (click)="gameService.isPlayTrue($event)"
+  />
   <label for="radio-two">Play</label>
 </div>

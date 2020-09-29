@@ -12,9 +12,18 @@ export class CardComponent {
   @Input() translate: string;
   @Input() srcPath: string;
 
-  rotateToggle(): void {
-    console.log(1);
+  rotateTrue(): void {
+    this.isRotate = true;
+  }
 
-    this.isRotate = !this.isRotate;
+  rotateFalse(): void {
+    this.isRotate = false;
+  }
+
+  mediaHandler(evt: any): void {
+    if (evt.target.localName === 'img' && evt.target.className === 'title-img') {
+      const audio = new Audio(`../../assets/audio/${evt.srcElement.alt}.mp3`);
+      audio.play();
+    }
   }
 }

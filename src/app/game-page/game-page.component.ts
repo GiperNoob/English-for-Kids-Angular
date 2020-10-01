@@ -1,28 +1,27 @@
 import { GameService } from './../services/game.service';
 import { DataService, ICard } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-content-page',
-  templateUrl: './content-page.component.html',
-  styleUrls: ['./content-page.component.scss']
+  selector: 'app-game-page',
+  templateUrl: './game-page.component.html',
+  styleUrls: ['./game-page.component.scss']
 })
-export class ContentPageComponent implements OnInit {
-  id: string;
-  data: Array<ICard>;
+export class GamePageComponent implements OnInit {
   subscription: Subscription;
-
+  data: Array<ICard>;
   constructor(
     private dataService: DataService,
-    private activateRoute: ActivatedRoute,
-    public gameService: GameService) { }
+    private gameService: GameService,
+    private activateRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.subscription = this.activateRoute.params.subscribe(({ id }) => {
-      this.id = id;
       this.data = this.dataService.getData(id);
     });
   }
+
 }

@@ -1,0 +1,7 @@
+<div class="game-container">
+  <app-card-for-game
+    *ngFor="let card of data"
+    [srcPath]="card.image"
+    [word]="card.word"
+  ></app-card-for-game>
+</div>

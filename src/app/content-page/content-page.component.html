@@ -9,12 +9,7 @@
 
 <ng-container *ngIf="gameService.isPlay">
   <div class="container-button">
-    <button
-      class="start-game"
-      [class.repeat]="gameService.isRepeat ? true : false"
-      id="Action Set(A)"
-      (click)="gameService.startGame()"
-    >
+    <button class="start-game" [routerLink]="['/game-page', id]">
       Start Game
     </button>
   </div>

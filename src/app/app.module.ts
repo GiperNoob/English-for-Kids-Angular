@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { SwitchFieldComponent } from './switch-field/switch-field.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
+import { GamePageComponent } from './game-page/game-page.component';
+import { CardForGameComponent } from './card-for-game/card-for-game.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HeaderContainerComponent } from './header-container/header-container.co
     CardComponent,
     ContentPageComponent,
     SwitchFieldComponent,
-    HeaderContainerComponent
+    HeaderContainerComponent,
+    GamePageComponent,
+    CardForGameComponent
   ],
   imports: [
     BrowserModule,

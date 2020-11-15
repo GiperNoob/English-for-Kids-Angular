@@ -1,4 +1,4 @@
-<nav class="header__menu" [class.active]="isActive ? true : false">
+<nav class="header__menu" [class.active]="basicService.isActive ? true : false">
   <ul class="header__list">
     <li class="header__link" id="Main Page">
       <a
@@ -8,68 +8,20 @@
         >Main Page</a
       >
     </li>
-    <li class="header__link">
+    <li *ngFor="let link of links" class="header__link">
       <a
-        [routerLink]="['/content', 'Action Set(A)']"
+        [routerLink]="['/content', link]"
         routerLinkActive="router-link-active"
-        >Action Set(A)</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Action Set(B)']"
-        routerLinkActive="router-link-active"
-        >Action Set(B)</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Action Set(C)']"
-        routerLinkActive="router-link-active"
-        >Action Set(C)</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Adjective']"
-        routerLinkActive="router-link-active"
-        >Adjective</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Animal Set(A)']"
-        routerLinkActive="router-link-active"
-        >Animal Set(A)</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Animal Set(B)']"
-        routerLinkActive="router-link-active"
-        >Animal Set(B)</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Clothes']"
-        routerLinkActive="router-link-active"
-        >Clothes</a
-      >
-    </li>
-    <li class="header__link">
-      <a
-        [routerLink]="['/content', 'Emotion']"
-        routerLinkActive="router-link-active"
-        >Emotion</a
+        (click)="basicService.toggleClassMenuBurger()"
+        >{{ link }}</a
       >
     </li>
   </ul>
 </nav>
 <div
   class="header__burger"
-  [class.active]="isActive ? true : false"
-  (click)="toggleClassMenuBurger()"
+  [class.active]="basicService.isActive ? true : false"
+  (click)="basicService.toggleClassMenuBurger()"
 >
   <span></span>
 </div>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title-page.component.scss']
 })
 export class TitlePageComponent implements OnInit {
-  data: Array<ITitleCard>;
+  public data: Array<ITitleCard>;
 
   constructor(private dataService: DataService) { }
 

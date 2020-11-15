@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { BasicService } from './../services/basic.service';
+import { DataService } from './../services/data.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,10 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 
-export class NavBarComponent {
-  isActive = false;
+export class NavBarComponent implements OnInit {
+  public links: Array<string> = [];
 
-  toggleClassMenuBurger(): void {
-    this.isActive = !this.isActive;
+  constructor(
+    private serviceData: DataService,
+    public basicService: BasicService
+  ) { }
+
+  ngOnInit(): void {
+    this.links = this.serviceData.getLinks();
   }
 }

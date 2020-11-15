@@ -17,6 +17,17 @@ export interface ICard {
 })
 
 export class DataService {
+private linksData: Array<string> = [
+  'Action Set(A)',
+  'Action Set(B)',
+  'Action Set(C)',
+  'Adjective',
+  'Animal Set(A)',
+  'Animal Set(B)',
+  'Clothes',
+  'Emotion',
+];
+
   private titleData: Array<ITitleCard> = [
     {
       title: 'Action Set(A)',
@@ -455,6 +466,10 @@ export class DataService {
       },
     ],
   };
+
+  getLinks(): Array<string> {
+    return this.linksData;
+  }
 
   getData(key: string): Array<ICard> {
     return this.data[key];

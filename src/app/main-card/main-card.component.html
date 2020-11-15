@@ -2,6 +2,7 @@
   class="main-card green"
   [class.red]="gameService.isPlay ? true : false"
   [routerLink]="['/content', title]"
+  (click)="basicService.toggleClassMenuBurger()"
 >
   <img [src]="srcPath" [alt]="srcPath" />
   <span>{{ title }}</span>

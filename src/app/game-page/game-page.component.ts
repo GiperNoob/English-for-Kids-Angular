@@ -10,8 +10,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./game-page.component.scss']
 })
 export class GamePageComponent implements OnInit {
-  subscription: Subscription;
-  data: Array<ICard>;
+  public subscription: Subscription;
+  public data: Array<ICard>;
+  public arrayOfSounds: Array<string>;
+
   constructor(
     private dataService: DataService,
     private gameService: GameService,
@@ -22,6 +24,8 @@ export class GamePageComponent implements OnInit {
     this.subscription = this.activateRoute.params.subscribe(({ id }) => {
       this.data = this.dataService.getData(id);
     });
+
+    this.arrayOfSounds = this.gameService.gettingOnArrayOfSoundsForGame(this.data);
   }
 
 }

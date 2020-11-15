@@ -1,3 +1,4 @@
+import { BasicService } from './../services/basic.service';
 import { GameService } from './../services/game.service';
 import { Component, Input } from '@angular/core';
 
@@ -11,5 +12,8 @@ export class MainCardComponent {
   @Input() title: string;
   @Input() srcPath: string;
 
-  constructor(public gameService: GameService) { }
+  constructor(
+    public gameService: GameService,
+    public basicService: BasicService,
+  ) { }
 }

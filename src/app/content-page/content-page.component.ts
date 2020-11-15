@@ -1,6 +1,6 @@
 import { GameService } from './../services/game.service';
 import { DataService, ICard } from './../services/data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './content-page.component.html',
   styleUrls: ['./content-page.component.scss']
 })
-export class ContentPageComponent implements OnInit {
+export class ContentPageComponent implements OnInit, OnDestroy {
   id: string;
   data: Array<ICard>;
   subscription: Subscription;
@@ -17,12 +17,17 @@ export class ContentPageComponent implements OnInit {
   constructor(
     private dataService: DataService,
     private activateRoute: ActivatedRoute,
-    public gameService: GameService) { }
+    public gameService: GameService
+    ) { }
 
   ngOnInit(): void {
     this.subscription = this.activateRoute.params.subscribe(({ id }) => {
       this.id = id;
       this.data = this.dataService.getData(id);
     });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

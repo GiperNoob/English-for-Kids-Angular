@@ -1,5 +1,6 @@
 <nav class="header__menu" [class.active]="basicService.isActive ? true : false">
   <ul class="header__list">
+
     <li class="header__link" id="Main Page">
       <a
         [routerLink]="['/']"
@@ -8,6 +9,7 @@
         >Main Page</a
       >
     </li>
+
     <li *ngFor="let link of links" class="header__link">
       <a
         [routerLink]="['/content', link]"
@@ -16,8 +18,10 @@
         >{{ link }}</a
       >
     </li>
+
   </ul>
 </nav>
+
 <div
   class="header__burger"
   [class.active]="basicService.isActive ? true : false"

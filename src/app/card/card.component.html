@@ -3,14 +3,17 @@
   [class.rotate]="isRotate ? true : false"
   (click)="mediaHandler($event)"
 >
+
   <div class="front">
     <img [src]="srcPath" [alt]="word" class="title-img" />
     <div class="card-header">{{ word }}</div>
   </div>
+
   <div class="back">
     <img [src]="srcPath" [alt]="word" />
     <div class="card-header">{{ translate }}</div>
   </div>
+
   <div class="rotate-icon" (click)="rotateTrue()" (mouseleave)="rotateFalse()">
     <img
       src="../../assets/images/rotate.svg"
@@ -18,4 +21,5 @@
       class="rotate-img"
     />
   </div>
+
 </div>

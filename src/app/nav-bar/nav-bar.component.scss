@@ -55,21 +55,21 @@ a {
   z-index: 51;
   width: 30px;
   height: 21px;
-}
 
-.header__burger:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
+  }
 
-.header__burger:before,
-.header__burger:after {
-  content: "";
-  background-color: #cdcdcd;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  transition: all ease-in-out 0.3s;
+  &:before,
+  &:after {
+    content: "";
+    background-color: #cdcdcd;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all ease-in-out 0.3s;
+  }
 }
 
 .header__burger span {

@@ -1,7 +1,17 @@
-.game-container {
-  margin-top: 85px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+header {
+  text-align: right;
+  margin-top: 10px;
+  height: 30px;
+}
+
+.start-game.repeat {
+  width: 65px;
+  height: 65px;
+  margin: 0px auto;
+  font-size: 0;
+  background-image: url(..//..//assets/images/repeat.svg),linear-gradient(40deg,#ffd86f,#fc6262);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 32px 32px,cover;
+  background-position: 50%;
 }

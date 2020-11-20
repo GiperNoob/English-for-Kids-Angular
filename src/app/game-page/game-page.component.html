@@ -1,7 +1,22 @@
-<div class="game-container">
+<header>
+  <ng-container *ngIf="stars.length" >
+    <span *ngFor="let star of stars" >
+      <img src="../../assets/images/{{star.src}}" alt="star">
+    </span>
+  </ng-container>
+</header>
+
+<div class="container">
   <app-card-for-game
     *ngFor="let card of data"
     [srcPath]="card.image"
     [word]="card.word"
+    (click)="clickEventHandler($event)"
   ></app-card-for-game>
 </div>
+
+<div class="container-button">
+  <button class="start-game repeat" (click)="repeatEventHandler()" ></button>
+</div>
+
+

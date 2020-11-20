@@ -12,6 +12,8 @@ import { SwitchFieldComponent } from './switch-field/switch-field.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
 import { GamePageComponent } from './game-page/game-page.component';
 import { CardForGameComponent } from './card-for-game/card-for-game.component';
+import { LosingPageComponent } from './losing-page/losing-page.component';
+import { WinnerPageComponent } from './winner-page/winner-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CardForGameComponent } from './card-for-game/card-for-game.component';
     SwitchFieldComponent,
     HeaderContainerComponent,
     GamePageComponent,
-    CardForGameComponent
+    CardForGameComponent,
+    LosingPageComponent,
+    WinnerPageComponent
   ],
   imports: [
     BrowserModule,

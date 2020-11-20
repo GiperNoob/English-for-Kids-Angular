@@ -1,5 +1,6 @@
 import { ICard } from './data.service';
-import { Subscription } from 'rxjs';
+import { of, Subscription } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { Location } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -28,19 +29,32 @@ export class GameService {
     this.isPlay = !evt.target.checked;
   }
 
-  private shuffle(array: Array<string>): Array<string> {
-    return array.sort(() => Math.random() - 0.5);
-  }
-
   public gettingOnArrayOfSoundsForGame(data: Array<ICard>): Array<string> {
     const soundsForGame = [];
+    const arrayAudio = [];
 
     data.forEach((card) => {
       soundsForGame.push(card.audioSrc);
     });
 
-    return this.shuffle(soundsForGame);
+    this.shuffle(soundsForGame).forEach(word => {
+      arrayAudio.push({
+        word,
+        audio: new Audio(`../../assets/${word}`)
+      });
+    });
+
+    return arrayAudio;
   }
 
-  public startGame(): void { }
+  public playSound(arrayAudio: string[], currentWord: string | number): void {
+    of(arrayAudio[currentWord])
+      .pipe(
+        delay(1000),
+      ).subscribe(obj => obj.audio.play());
+  }
+
+  private shuffle(array: Array<string>): Array<string> {
+    return array.sort(() => Math.random() - 0.5);
+  }
 }

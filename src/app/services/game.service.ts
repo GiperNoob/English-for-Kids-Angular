@@ -44,6 +44,7 @@ export class GameService {
       });
     });
 
+    console.log(arrayAudio);
     return arrayAudio;
   }
 

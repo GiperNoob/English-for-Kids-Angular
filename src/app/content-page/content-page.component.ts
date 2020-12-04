@@ -17,8 +17,8 @@ export class ContentPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private dataService: DataService,
+    public gameService: GameService,
     private activateRoute: ActivatedRoute,
-    public gameService: GameService
   ) { }
 
   ngOnInit(): void {

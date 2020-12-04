@@ -12,7 +12,7 @@ describe('CardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        CardComponent
+        CardComponent,
       ]
     });
 
@@ -23,7 +23,7 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create the component', () => {
+  it('should create the CardComponent', () => {
     expect(component).toBeDefined();
   });
 

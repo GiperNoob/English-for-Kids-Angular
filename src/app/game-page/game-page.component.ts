@@ -1,7 +1,7 @@
 import { BasicService } from './../services/basic.service';
 import { GameService } from './../services/game.service';
 import { DataService, ICard } from './../services/data.service';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
@@ -14,7 +14,7 @@ export interface IStar {
   templateUrl: './game-page.component.html',
   styleUrls: ['./game-page.component.scss']
 })
-export class GamePageComponent implements OnInit, AfterViewInit {
+export class GamePageComponent implements OnInit, AfterViewInit, OnDestroy {
   public subscription: Subscription;
   public arrayOfSounds: Array<string>;
   public data: Array<ICard>;
@@ -39,6 +39,10 @@ export class GamePageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.gameService.playSound(this.arrayOfSounds, this.currentWord);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   public clickEventHandler(evt: { path: { alt: string }; target: { style: { opacity: string } } }): void {

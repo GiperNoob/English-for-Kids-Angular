@@ -4,8 +4,9 @@ import { LosingPageComponent } from './losing-page.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 describe('LosingPageComponent', () => {
-  let compoent: LosingPageComponent;
+  let component: LosingPageComponent;
   let fixture: ComponentFixture<LosingPageComponent>;
+  let basicService: BasicService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -15,11 +16,25 @@ describe('LosingPageComponent', () => {
     });
 
     fixture = TestBed.createComponent(LosingPageComponent);
-    compoent = fixture.componentInstance;
+    component = fixture.componentInstance;
+
+    basicService = TestBed.inject(BasicService);
+
     fixture.detectChanges();
   });
 
   it('should be create LosingPageComponent', () => {
-    expect(compoent).toBeDefined();
+    expect(component).toBeDefined();
   });
+
+  // it('when OnInit init should be called new Audio(`test`) this.basicService.redirect', () => {
+  //   component.ngOnInit();
+  //   spyOn(basicService, 'redirect').and.callFake(() => {
+  //     setTimeout(() => {
+  //       basicService.isActive = true;
+  //     });
+  //   });
+  //   fixture.detectChanges();
+  //   expect(basicService.isActive).toBeTruthy();
+  // });
 });

@@ -1,4 +1,3 @@
-import { ICard } from './data.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { GameService } from './game.service';
 import { TestBed } from '@angular/core/testing';

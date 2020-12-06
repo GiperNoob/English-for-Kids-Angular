@@ -20,7 +20,7 @@ export class CardComponent {
     this.isRotate = false;
   }
 
-  public mediaHandler(evt: any): void {
+  public mediaHandler(evt: { target: { localName: string; className: string; }; srcElement: { alt: string; } }): void {
     if (evt.target.localName === 'img' && evt.target.className === 'title-img') {
       const audio = new Audio(`../../assets/audio/${evt.srcElement.alt}.mp3`);
       audio.play();

@@ -72,12 +72,16 @@ describe('CardComponent', () => {
       target: {
         localName: 'img',
         className: 'title-img'
-      }
+      },
+      srcElement: {
+        alt: 'test',
+      },
     };
 
-    spyOn(component, 'mediaHandler').and.callThrough();
     de.triggerEventHandler('click', mockEvent);
-    expect(component.mediaHandler).toHaveBeenCalledWith(mockEvent);
+    spyOn(component, 'mediaHandler').and.callFake(() => {
+      const audio: HTMLAudioElement = new Audio(`../../assets/audio/${mockEvent.srcElement.alt}.mp3`);
+      audio.play();
+    });
   });
-
 });

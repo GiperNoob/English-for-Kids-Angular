@@ -23,4 +23,10 @@ describe('BasicService', () => {
     basicService.toggleClassMenuBurger();
     expect(basicService.isActive).toBeFalse();
   });
+
+  it('when was call toggleClassMenuBurger isActive = true, by isActive = false', () => {
+    basicService.toggleClassMenuBurger();
+    basicService.toggleClassMenuBurger();
+    expect(basicService.isActive).toBeTruthy();
+  });
 });

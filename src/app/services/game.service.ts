@@ -17,11 +17,11 @@ export class GameService {
   public isPlay: boolean;
   public subscription: Subscription;
 
-  public isPlayTrue(evt: { target: { checked: boolean; }; }): void {
+  public isPlayTrue(evt: { target: { checked: boolean } }): void {
     this.isPlay = evt.target.checked;
   }
 
-  public isPlayFalse(evt: { target: { checked: boolean; }; }): void {
+  public isPlayFalse(evt: { target: { checked: boolean } }): void {
     if (this.router.url.match('game-page')) {
       this.location.back();
     }
@@ -44,7 +44,6 @@ export class GameService {
       });
     });
 
-    console.log(arrayAudio);
     return arrayAudio;
   }
 
